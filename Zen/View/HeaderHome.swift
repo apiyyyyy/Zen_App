@@ -10,7 +10,11 @@ import SwiftUI
 struct HeaderHome: View {
     var body: some View {
         ZStack {
-            Color.rosyPeach
+            LinearGradient(
+              colors: [.softTeal, .mutedLavender],
+              startPoint: .leading,
+              endPoint: .trailing
+            )
             
             VStack(spacing: 10) {
                 HStack(spacing: 15) {

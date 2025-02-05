@@ -10,7 +10,8 @@ import SwiftUI
 struct Home: View {
     var body: some View {
         ZStack {
-            Color.peach.ignoresSafeArea()
+//            LinearGradient(colors: [Color.offWhite, Color.freshMint], startPoint: .leading, endPoint: .trailing)
+            Color.offWhite.ignoresSafeArea()
             
             
             VStack {
@@ -22,10 +23,10 @@ struct Home: View {
                         Text("Tugas - Tugas Kalian")
                             .font(.title)
                             .fontWeight(.bold)
-                            .foregroundStyle(.grey)
+                            .foregroundStyle(.warmGray)
                     } //vstack
                     .padding(1)
-                    .background(.white)
+                    .background(LinearGradient(colors: [Color.offWhite, Color.freshMint], startPoint: .leading, endPoint: .trailing))
                     .cornerRadius(35)
                 } //scrollview
                 .frame(maxWidth: .infinity)
@@ -36,7 +37,7 @@ struct Home: View {
         }
     }
 }
-
+                    
 #Preview {
     Home()
 }
