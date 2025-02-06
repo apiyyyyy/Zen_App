@@ -7,13 +7,30 @@
 
 import SwiftUI
 import SwiftData
+import GoogleSignIn
+import FirebaseCore
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        FirebaseApp.configure()
+        
+        return true
+    }
+}
 
 @main
 struct ZenApp: App {
+    @StateObject private var authManager = AuthManager()
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     var body: some Scene {
         WindowGroup {
-            Home()
+            ContentView()
+                .environmentObject(authManager)
+                .onOpenURL { url in
+                    GIDSignIn.sharedInstance.handle(url)
+                }
         }
     }
 }

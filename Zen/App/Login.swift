@@ -4,10 +4,13 @@
 //
 //  Created by MOHAMMADB on 05/02/25.
 //
-
+import FirebaseCore
 import SwiftUI
+import GoogleSignIn
 
 struct Login: View {
+    @EnvironmentObject var authManager : AuthManager
+    
     var body: some View {
         ZStack {
             LinearGradient(
@@ -34,6 +37,7 @@ struct Login: View {
                     .padding(.bottom, 100)
                 
                 Button(action: {
+                    signInWithGoogle()
                 }, label: {
                     Image(.googleLogo)
                         .resizable()
@@ -52,6 +56,31 @@ struct Login: View {
             } //vstack
             .padding()
         }//zstack
+    }
+    
+    func signInWithGoogle() {
+        guard let clientID = FirebaseApp.app()?.options.clientID else {
+            return
+        }
+        
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.configuration = config
+        
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+        let rootVc = windowScene.windows.first?.rootViewController else {
+            return
+        }
+        
+        GIDSignIn.sharedInstance.signIn(withPresenting: rootVc) { result, error in
+            if let error = error {
+                print("Google sign in error : \(error)")
+                return
+            }
+            
+            if let result = result {
+                authManager.handleGoogleSignIn(result: result)
+            }
+        }
     }
 }
 
