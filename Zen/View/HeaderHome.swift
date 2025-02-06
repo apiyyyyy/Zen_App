@@ -46,9 +46,9 @@ struct HeaderHome: View {
             } //vstack
             .padding()
         }// zstack
-        .frame(height: 280)
-        .frame(maxWidth: .infinity)
-        .ignoresSafeArea()
+        .frame(height: 200)
+        .cornerRadius(15)
+        .padding()
     }
 }
 

@@ -10,8 +10,7 @@ import SwiftUI
 struct Home: View {
     var body: some View {
         ZStack {
-//            LinearGradient(colors: [Color.offWhite, Color.freshMint], startPoint: .leading, endPoint: .trailing)
-            Color.offWhite.ignoresSafeArea()
+            LinearGradient(colors: [Color.offWhite, Color.freshMint], startPoint: .topLeading, endPoint: .bottomTrailing).ignoresSafeArea()
             
             
             VStack {
@@ -26,7 +25,7 @@ struct Home: View {
                             .foregroundStyle(.warmGray)
                     } //vstack
                     .padding(1)
-                    .background(LinearGradient(colors: [Color.offWhite, Color.freshMint], startPoint: .leading, endPoint: .trailing))
+//                    .background(LinearGradient(colors: [Color.offWhite, Color.freshMint], startPoint: .leading, endPoint: .trailing))
                     .cornerRadius(35)
                 } //scrollview
                 .frame(maxWidth: .infinity)

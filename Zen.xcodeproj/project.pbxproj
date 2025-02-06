@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10D9A0A42D537C7B00D56B16 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 10D9A0A32D537C7B00D56B16 /* Realm */; };
-		10D9A0A62D537C7B00D56B16 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 10D9A0A52D537C7B00D56B16 /* RealmSwift */; };
 		10D9A0A92D537F4800D56B16 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 10D9A0A82D537F4800D56B16 /* GoogleSignIn */; };
 		10D9A0AB2D537F4800D56B16 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 10D9A0AA2D537F4800D56B16 /* GoogleSignInSwift */; };
 /* End PBXBuildFile section */
@@ -59,8 +57,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10D9A0A62D537C7B00D56B16 /* RealmSwift in Frameworks */,
-				10D9A0A42D537C7B00D56B16 /* Realm in Frameworks */,
 				10D9A0A92D537F4800D56B16 /* GoogleSignIn in Frameworks */,
 				10D9A0AB2D537F4800D56B16 /* GoogleSignInSwift in Frameworks */,
 			);
@@ -123,8 +119,6 @@
 			);
 			name = Zen;
 			packageProductDependencies = (
-				10D9A0A32D537C7B00D56B16 /* Realm */,
-				10D9A0A52D537C7B00D56B16 /* RealmSwift */,
 				10D9A0A82D537F4800D56B16 /* GoogleSignIn */,
 				10D9A0AA2D537F4800D56B16 /* GoogleSignInSwift */,
 			);
@@ -211,7 +205,6 @@
 			mainGroup = 6B1F64842D0554A400CDFA3D;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				10D9A0A22D537C7B00D56B16 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				10D9A0A72D537F4800D56B16 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			preferredProjectObjectVersion = 77;
@@ -579,14 +572,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		10D9A0A22D537C7B00D56B16 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		10D9A0A72D537F4800D56B16 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
@@ -598,16 +583,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		10D9A0A32D537C7B00D56B16 /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 10D9A0A22D537C7B00D56B16 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = Realm;
-		};
-		10D9A0A52D537C7B00D56B16 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 10D9A0A22D537C7B00D56B16 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
-		};
 		10D9A0A82D537F4800D56B16 /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 10D9A0A72D537F4800D56B16 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
