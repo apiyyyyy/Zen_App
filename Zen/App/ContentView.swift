@@ -13,18 +13,19 @@ struct ContentView: View {
     
     
     var body: some View {
-        Group {
-            if authManager.isLoggedIn {
-                if authManager.needProfileSetup {
-//                    Profile()
-                }else {
-                    Home()
-                }
-            }else {
-                Login()
-            }
-        }
-        .environmentObject(authManager) // this will make authmanager avail to all views
+//        Group {
+//            if authManager.isLoggedIn {
+//                if authManager.needProfileSetup {
+////                    Profile()
+//                }else {
+//                    Main()
+//                }
+//            }else {
+//                Login()
+//            }
+//        }
+//        .environmentObject(authManager) // this will make authmanager avail to all views
+        Main()
     }
 }
 

@@ -18,7 +18,7 @@ struct TabButton: View {
             withAnimation(.spring()){ selected = title }
         }) {
             HStack(spacing: 10) {
-                Image(systemName: image)
+                Image(image)
                     .resizable()
                     .renderingMode(.template)
                     .frame(width: 25, height: 25)

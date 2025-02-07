@@ -17,26 +17,26 @@ struct Main: View {
                 Home()
                     .tag("Home")
                 
-                Text("Summary")
-                    .tag("Summary")
+                Profile()
+                    .tag("Profile")
                 
-                Text("Summary")
-                    .tag("Summary")
+//                Text("Summary")
+//                    .tag("Summary")
             } //Tabview
             .ignoresSafeArea()
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             
             HStack {
             
-                TabButton(title: "Home", image: "house", selected: $current)
+                TabButton(title: "Home", image: "board", selected: $current)
                 
-                Spacer()
+//                Spacer(minLength: 10)
                 
-                TabButton(title: "Transactions", image: "dollarsign.arrow.trianglehead.counterclockwise.rotate.90", selected: $current)
+                TabButton(title: "Profile", image: "profile", selected: $current)
                 
-                Spacer()
-                
-                TabButton(title: "Summary", image: "chart.pie", selected: $current)
+//                Spacer()
+//                
+//                TabButton(title: "Summary", image: "chart.pie", selected: $current)
             }//Hstack tabbar
             .padding(.vertical, 12)
             .padding(.horizontal)

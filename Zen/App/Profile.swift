@@ -6,10 +6,16 @@
 //
 
 import SwiftUI
+import Inject
 
 struct Profile: View {
+    @ObserveInjection var inject
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("123")
+        } //vstack
+        .enableInjection()
     }
 }
 
