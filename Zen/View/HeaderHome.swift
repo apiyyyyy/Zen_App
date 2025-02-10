@@ -11,9 +11,9 @@ struct HeaderHome: View {
     var body: some View {
         ZStack {
             LinearGradient(
-              colors: [.softTeal, .mutedLavender],
-              startPoint: .leading,
-              endPoint: .trailing
+                colors: [.softTeal, .mutedLavender],
+              startPoint: .topLeading,
+              endPoint: .bottomTrailing
             )
             
             VStack(spacing: 10) {

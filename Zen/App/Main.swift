@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Main: View {
+struct Main: View { 
     @State var current = "Home"
     
     var body: some View {
@@ -17,8 +17,8 @@ struct Main: View {
                 Home()
                     .tag("Home")
                 
-                Profile()
-                    .tag("Profile")
+                Personality()
+                    .tag("Personality")
                 
 //                Text("Summary")
 //                    .tag("Summary")
@@ -32,7 +32,7 @@ struct Main: View {
                 
 //                Spacer(minLength: 10)
                 
-                TabButton(title: "Profile", image: "profile", selected: $current)
+                TabButton(title: "Personality", image: "profile", selected: $current)
                 
 //                Spacer()
 //                

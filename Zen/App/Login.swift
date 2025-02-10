@@ -13,12 +13,7 @@ struct Login: View {
     
     var body: some View {
         ZStack {
-            LinearGradient(
-              colors: [.softTeal, .mutedLavender],
-              startPoint: .topLeading,
-              endPoint: .bottomLeading
-            )
-            .ignoresSafeArea()
+            LinearGradient(colors: [Color.softTeal, .offWhite], startPoint: .topLeading, endPoint: .bottomTrailing).ignoresSafeArea()
             
             VStack(spacing: 10) {
                 Text("Hi, Welcome Students :)")
