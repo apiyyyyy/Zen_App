@@ -16,6 +16,10 @@ struct Home: View {
                     HeaderHome()
                         .frame(maxWidth: .infinity)
                     
+//                    VStack  {
+//                        <#code#>
+//                    }
+                    
                     
                     
                 } //scrollview

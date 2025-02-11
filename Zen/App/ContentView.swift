@@ -25,7 +25,8 @@ struct ContentView: View {
 //            }
 //        }
 //        .environmentObject(authManager) // this will make authmanager avail to all views
-        Main()
+//        Main()
+        Login()
     }
 }
 

@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 import GoogleSignIn
-import FirebaseCore
+//import FirebaseCore
 
 //class AppDelegate: NSObject, UIApplicationDelegate {
 //    func application(_ application: UIApplication,
@@ -27,7 +27,7 @@ struct ZenApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(authManager)
+//                .environmentObject(authManager)
                 .onOpenURL { url in
                     GIDSignIn.sharedInstance.handle(url)
                 }

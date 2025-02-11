@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		103FA7A12D54709F00D6F723 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 103FA7A02D54709F00D6F723 /* RealmSwift */; };
 		103FA7A22D54714300D6F723 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 103FA7A02D54709F00D6F723 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		103FA7D22D54A51D00D6F723 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 103FA7D12D54A51D00D6F723 /* FirebaseAuth */; };
-		103FA7D42D54A51D00D6F723 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 103FA7D32D54A51D00D6F723 /* FirebaseAuthCombine-Community */; };
 		10A7C6272D55F2D000B243DA /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = 10A7C6262D55F2D000B243DA /* Inject */; };
 		10D9A0A92D537F4800D56B16 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 10D9A0A82D537F4800D56B16 /* GoogleSignIn */; };
 		10D9A0AB2D537F4800D56B16 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 10D9A0AA2D537F4800D56B16 /* GoogleSignInSwift */; };
@@ -53,9 +51,22 @@
 		6B1F64A92D0554A700CDFA3D /* ZenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		104989F32D5AFA6A0028A40E /* Exceptions for "Zen" folder in "Zen" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 6B1F648C2D0554A400CDFA3D /* Zen */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		6B1F648F2D0554A400CDFA3D /* Zen */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				104989F32D5AFA6A0028A40E /* Exceptions for "Zen" folder in "Zen" target */,
+			);
 			path = Zen;
 			sourceTree = "<group>";
 		};
@@ -79,8 +90,6 @@
 				103FA7A12D54709F00D6F723 /* RealmSwift in Frameworks */,
 				10D9A0A92D537F4800D56B16 /* GoogleSignIn in Frameworks */,
 				10D9A0AB2D537F4800D56B16 /* GoogleSignInSwift in Frameworks */,
-				103FA7D22D54A51D00D6F723 /* FirebaseAuth in Frameworks */,
-				103FA7D42D54A51D00D6F723 /* FirebaseAuthCombine-Community in Frameworks */,
 				10A7C6272D55F2D000B243DA /* Inject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,8 +155,6 @@
 				10D9A0A82D537F4800D56B16 /* GoogleSignIn */,
 				10D9A0AA2D537F4800D56B16 /* GoogleSignInSwift */,
 				103FA7A02D54709F00D6F723 /* RealmSwift */,
-				103FA7D12D54A51D00D6F723 /* FirebaseAuth */,
-				103FA7D32D54A51D00D6F723 /* FirebaseAuthCombine-Community */,
 				10A7C6262D55F2D000B243DA /* Inject */,
 			);
 			productName = Zen;
@@ -235,7 +242,6 @@
 			packageReferences = (
 				10D9A0A72D537F4800D56B16 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				103FA79F2D54709F00D6F723 /* XCRemoteSwiftPackageReference "realm-swift" */,
-				103FA7D02D54A51D00D6F723 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				10A7C6252D55F2D000B243DA /* XCRemoteSwiftPackageReference "Inject" */,
 			);
 			preferredProjectObjectVersion = 77;
@@ -450,6 +456,7 @@
 				DEVELOPMENT_TEAM = V6D662H8CQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Zen/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -479,6 +486,7 @@
 				DEVELOPMENT_TEAM = V6D662H8CQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Zen/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -619,14 +627,6 @@
 				minimumVersion = 20.0.1;
 			};
 		};
-		103FA7D02D54A51D00D6F723 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 11.8.1;
-			};
-		};
 		10A7C6252D55F2D000B243DA /* XCRemoteSwiftPackageReference "Inject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/krzysztofzablocki/Inject.git";
@@ -650,16 +650,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 103FA79F2D54709F00D6F723 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
-		};
-		103FA7D12D54A51D00D6F723 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 103FA7D02D54A51D00D6F723 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		103FA7D32D54A51D00D6F723 /* FirebaseAuthCombine-Community */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 103FA7D02D54A51D00D6F723 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseAuthCombine-Community";
 		};
 		10A7C6262D55F2D000B243DA /* Inject */ = {
 			isa = XCSwiftPackageProductDependency;
