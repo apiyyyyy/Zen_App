@@ -16,7 +16,7 @@ struct Login: View {
             LinearGradient(colors: [Color.softTeal, .offWhite], startPoint: .topLeading, endPoint: .bottomTrailing).ignoresSafeArea()
             
             VStack(spacing: 10) {
-                Text("Hi, Welcome Students :)")
+                Text("Hi!,\nWelcome Labschoolian :)")
                     .font(.system(size: 33))
                     .fontWeight(.bold)
                     .foregroundStyle(.white)

@@ -7,10 +7,11 @@
 
 import SwiftUI
 import SwiftData
+import Inject
 
 struct ContentView: View {
     @EnvironmentObject var authManager : AuthManager
-    
+    @ObservedObject private var iO = InjectConfiguration.observer
     
     var body: some View {
 //        Group {
@@ -25,8 +26,9 @@ struct ContentView: View {
 //            }
 //        }
 //        .environmentObject(authManager) // this will make authmanager avail to all views
-//        Main()
-        Login()
+        Main()
+//        Login()
+            .enableInjection()
     }
 }
 

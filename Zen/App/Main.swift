@@ -18,7 +18,7 @@ struct Main: View {
                     .tag("Home")
                 
                 Personality()
-                    .tag("Personality")
+                    .tag("Personality")     
                 
 //                Text("Summary")
 //                    .tag("Summary")
