@@ -11,15 +11,34 @@ import SwiftUI
 
 struct CardView<Content: View>: View {
     let content: Content
-    var backgroundColor: Color = .white
-    var corderRadios: CGFloat = 12
-    var borderColor: Color = .clear
-    var borderWidth: CGFloat = 0
-    var shadowColor: Color = .gray
-    var shadowRadius: CGFloat = 3
-    var shadowOffset: CGSize = .zero
+        var backgroundColor: Color
+        var cornerRadius: CGFloat
+        var borderColor: Color
+        var borderWidth: CGFloat
+        var shadowColor: Color
+        var shadowRadius: CGFloat
+        var shadowOffset: CGSize
+        var hasShadow: Bool
     
-    init(@ViewBuilder content: () -> Content) {
+    init(
+        backgroundColor: Color = .white,
+        cornerRadius: CGFloat = 12,
+        borderColor: Color = .clear,
+        borderWidth: CGFloat = 0,
+        shadowColor: Color = .gray,
+        shadowRadius: CGFloat = 3,
+        shadowOffset: CGSize = .zero,
+        hasShadow: Bool = true,
+        @ViewBuilder content: () -> Content
+        ) {
+        self.backgroundColor = backgroundColor
+        self.cornerRadius = cornerRadius
+        self.borderColor = borderColor
+        self.borderWidth = borderWidth
+        self.shadowColor = shadowColor
+        self.shadowRadius = shadowRadius
+        self.shadowOffset = shadowOffset
+        self.hasShadow = hasShadow
         self.content = content()
     }
     
@@ -31,11 +50,16 @@ struct CardView<Content: View>: View {
         .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(backgroundColor)
-        .cornerRadius(corderRadios)
+        .cornerRadius(cornerRadius)
         .overlay(
-            RoundedRectangle(cornerRadius: corderRadios)
+            RoundedRectangle(cornerRadius: cornerRadius)
                 .stroke(borderColor, lineWidth: borderWidth)
         )
-        .shadow(color: shadowColor, radius: shadowRadius, x: shadowOffset.width, y: shadowOffset.height)
+        .shadow(
+            color: hasShadow ? shadowColor : .clear,
+            radius: hasShadow ? shadowRadius : 0,
+            x: hasShadow ? shadowOffset.width : 0,
+            y: hasShadow ? shadowOffset.height : 0
+        )
     }
 }
